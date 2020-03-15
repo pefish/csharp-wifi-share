@@ -1,0 +1,32 @@
+﻿<Window x:Class="WifiShare.FormMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WIFI Share——白帽黑客基地（bbs.wwskyl.com）出品" Loaded="Window_Loaded" Height="278.864" Width="482.565" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Name="lookState" Content="查看状态" HorizontalAlignment="Left" Margin="116.659,210.491,0,0" VerticalAlignment="Top" Width="75" Click="lookState_Click"/>
+        <Button Name="lookPwd" Content="查看密码" HorizontalAlignment="Left" Margin="251,210.491,0,0" VerticalAlignment="Top" Width="75" Click="lookPwd_Click"/>
+        <GroupBox Header="第一步" HorizontalAlignment="Left" VerticalAlignment="Top" Height="102.067" Width="461.297">
+            <Grid>
+                <Label Content="SSID：" HorizontalAlignment="Left" Margin="38.389,6.456,0,0" VerticalAlignment="Top"/>
+                <Label Content="验证密钥：" HorizontalAlignment="Left" Margin="16.909,37.292,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="ssid" HorizontalAlignment="Left" Height="23" Margin="86.911,6.457,0,0" TextWrapping="NoWrap"  Text="" VerticalAlignment="Top" Width="185.627"/>
+                <PasswordBox x:Name="pwd" HorizontalAlignment="Left" Margin="86.911,37.294,0,0" VerticalAlignment="Top" Width="140.821" Height="26"/>
+                <TextBox Name="pwdDisplay" Visibility="Hidden" HorizontalAlignment="Left" Height="26" Margin="86.911,37.294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140.821"/>
+                <Button x:Name="startShare" Content="开启" HorizontalAlignment="Left" Margin="315.711,6.457,0,0" VerticalAlignment="Top" Width="101.264" Height="56.673" FontSize="24" Click="Button_Click"/>
+                <CheckBox x:Name="displayPwd" Content="显示" HorizontalAlignment="Left" Margin="232.73,42.292,0,0" VerticalAlignment="Top" Checked="displayPwd_Checked" Unchecked="displayPwd_Unchecked"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="第二步" HorizontalAlignment="Left" Margin="0,102.067,0,0" VerticalAlignment="Top" Height="96.888" Width="461.297">
+            <Grid>
+                <Label Content="选择共享网络来源：" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox Name="interfaceLists1" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" Width="186.821"/>
+                <Label Content="选择共享网络目标：" HorizontalAlignment="Left" Margin="10,38.214,0,0" VerticalAlignment="Top"/>
+                <ComboBox Name="interfaceLists2" HorizontalAlignment="Left" Margin="133,42.214,0,0" VerticalAlignment="Top" Width="186.821"/>
+                <Button Content="开启" FontSize="24" HorizontalAlignment="Left" Margin="336.4,10,0,0" VerticalAlignment="Top" Width="93.518" Height="54.051" Click="Button_Click_1"/>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
